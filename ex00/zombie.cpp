@@ -3,20 +3,19 @@
 Zombie::Zombie(std::string name)
 {
 	this->_name = name;
-	std::cout << std::endl << "Zombie named: " << BOLDGREENUL \
+	std::cout << std::endl << "Zombie named: " << GREEN \
 	<< this->_name << RESET << " has been created!" << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie named: " << BOLDREDUL << this->_name << \
+	std::cout << "Zombie named: " << RED << this->_name << \
 		RESET << " has been destroyed!" << std::endl;
 }
 
 void	Zombie::announce(void)
 {
-	std::cout << ULINE << this->_name << RESET \
-		": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie	*newZombie(std::string name) {
@@ -24,6 +23,6 @@ Zombie	*newZombie(std::string name) {
 }
 
 void	randomChump(std::string name) {
-	Zombie zombie(name);
-	zombie.announce();
+	Zombie z1(name);
+	z1.announce();
 }
