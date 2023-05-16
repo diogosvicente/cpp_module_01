@@ -2,7 +2,7 @@ CC		= g++
 RM		= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
-SRC		= zombie.cpp main.cpp
+SRC		= Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 NAME		= zombie
 
 OBJ		= $(SRC:.cpp=.o)
