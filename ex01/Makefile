@@ -1,8 +1,10 @@
 CC		= g++
 RM		= rm -f
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+#CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS	= -std=c++98 -pedantic
 
 SRC		= Zombie.cpp zombieHorde.cpp main.cpp
+#SRC		= Zombie.cpp main.cpp
 NAME		= zombie
 
 OBJ		= $(SRC:.cpp=.o)
