@@ -30,11 +30,6 @@ void	Zombie::setName(std::string name)
 	this->_name = name;
 }
 
-std::string	Zombie::getName(void) const
-{
-	return(this->_name);
-}
-
 void	zombieNbr(int n)
 {
 	if (n < 10)
