@@ -3,8 +3,18 @@
 int	main(void)
 {
 	Zombie *horde;
+	int		hordeLength = 10;
 
-	horde = zombieHorde(7, "zombie");
+	horde = zombieHorde(hordeLength, "Random Zombie");
+
+	std::cout << std::endl;
+	while (hordeLength-- > 0){
+		horde[hordeLength].announce();
+	}
+
+	delete [] horde;
+
+
 
 
 

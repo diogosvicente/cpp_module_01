@@ -2,9 +2,9 @@
 
 Zombie::Zombie(void)
 {
-	this->_name = "Undefined";
+	this->_name = "unamed";
 	std::cout << std::endl << GREEN << this->_name << RESET \
-	<< " zombie has been created!" << std::endl;
+	<< " zombie has been created!";
 }
 
 Zombie::Zombie(std::string name)
@@ -28,4 +28,9 @@ void	Zombie::announce(void)
 void	Zombie::setName(std::string name)
 {
 	this->_name = name;
+}
+
+std::string	Zombie::getName(void) const
+{
+	return(this->_name);
 }
