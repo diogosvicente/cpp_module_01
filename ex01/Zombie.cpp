@@ -2,8 +2,8 @@
 
 Zombie::Zombie(void)
 {
-	this->_name = "unamed";
-	std::cout << std::endl << GREEN << this->_name << RESET \
+	this->_name = "";
+	std::cout << std::endl << GREEN << "(null)" << RESET \
 	<< " zombie has been created!";
 }
 
@@ -33,4 +33,31 @@ void	Zombie::setName(std::string name)
 std::string	Zombie::getName(void) const
 {
 	return(this->_name);
+}
+
+void	zombieNbr(int n)
+{
+	if (n < 10)
+		std::cout << 0 << n << " ";
+	else
+		std::cout << n << " ";
+}
+
+void	hordeHeader(void)
+{
+	std::cout << std::endl << std::endl \
+		<< "------------------------------------------------" \
+		<< std::endl << "---------- You have alerted the horde" \
+		<< " ----------"  << std::endl \
+		<< "------------------------------------------------" \
+		<< std::endl << std::endl;
+}
+
+void	hordeFooter(void)
+{
+	std::cout << std::endl \
+	<< "------------------------------------------" \
+	<< std::endl << "---------- Destroying the horde ----------" \
+	<< std::endl << "------------------------------------------" \
+	<< std::endl << std::endl;
 }

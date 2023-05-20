@@ -23,5 +23,8 @@ class Zombie
 };
 
 Zombie	*zombieHorde(int N, std::string name);
+void	hordeHeader(void);
+void	zombieNbr(int n);
+void	hordeFooter(void);
 
 #endif
