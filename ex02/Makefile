@@ -2,8 +2,8 @@ CC		= g++
 RM		= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC		= Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
-NAME		= zombie
+SRC		= main.cpp
+NAME		= hi_this_is_brain
 
 OBJ		= $(SRC:.cpp=.o)
 
@@ -21,6 +21,6 @@ fclean: clean
 re: fclean $(NAME)
 
 r: all
-	@./zombie
+	@./hi_this_is_brain
 
 .PHONY: all clean fclean re r
