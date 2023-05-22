@@ -21,6 +21,6 @@ fclean: clean
 re: fclean $(NAME)
 
 r: all
-	@./zombie
+	@./$(NAME)
 
 .PHONY: all clean fclean re r

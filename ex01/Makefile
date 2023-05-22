@@ -3,7 +3,6 @@ RM		= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRC		= Zombie.cpp zombieHorde.cpp main.cpp
-#SRC		= Zombie.cpp main.cpp
 NAME		= zombie
 
 OBJ		= $(SRC:.cpp=.o)
@@ -22,6 +21,6 @@ fclean: clean
 re: fclean $(NAME)
 
 r: all
-	@./zombie
+	@./$(NAME)
 
 .PHONY: all clean fclean re r
