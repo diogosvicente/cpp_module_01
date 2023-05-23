@@ -1,11 +1,11 @@
-CC		= g++
-RM		= rm -f
+CC			= g++
+RM			= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC		= main.cpp Weapon.cpp #HumanA.cpp HumanB.cpp
+SRC			= main.cpp Weapon.cpp HumanA.cpp #HumanB.cpp
 NAME		= attack
 
-OBJ		= $(SRC:.cpp=.o)
+OBJ			= $(SRC:.cpp=.o)
 
 all: $(NAME)
 

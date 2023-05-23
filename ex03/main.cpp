@@ -1,7 +1,8 @@
-#include "Weapon.hpp"
+#include "HumanA.hpp"
 
 int	main(void)
 {
-	std::cout << "Teste\n";
+	Weapon knife = Weapon("Knife");
+	HumanA h1 = HumanA("Diogo", knife);
 	return (0);
 }
