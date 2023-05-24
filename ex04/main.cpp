@@ -2,12 +2,13 @@
 #include <fstream>
 #include <string>
 
-const std::string RED = "\033[31m";
+const std::string RED 	= "\033[31m";
 const std::string ULINE = "\033[4m";
 const std::string RESET = "\033[0m";
 const std::string GREEN = "\033[32m";
 
-std::string replaceLine(const std::string &line, const std::string &s1, const std::string &s2) {
+std::string replaceLine(const std::string &line, const std::string &s1, const std::string &s2)
+{
     std::string newLine; // New line with substitutions
     size_t pos = 0;
     size_t foundPos = line.find(s1, pos); // Find the first occurrence of s1
@@ -28,10 +29,11 @@ std::string replaceLine(const std::string &line, const std::string &s1, const st
     // Add the remaining characters from the original line to the new line
     newLine += line.substr(pos);
 
-    return newLine;
+    return(newLine);
 }
 
-void ftReplace(const std::string &filename, const std::string &s1, const std::string &s2) {
+void ftReplace(const std::string &filename, const std::string &s1, const std::string &s2)
+{
     // Open the input file
     std::ifstream inputFile(filename.c_str());
     if (!inputFile) {
@@ -47,7 +49,8 @@ void ftReplace(const std::string &filename, const std::string &s1, const std::st
     }
 
     std::string line;
-    while (std::getline(inputFile, line)) {
+    while (std::getline(inputFile, line))
+	{
         std::string newLine = replaceLine(line, s1, s2);
 
         // Write the new line to the output file
@@ -61,8 +64,10 @@ void ftReplace(const std::string &filename, const std::string &s1, const std::st
     std::cout << GREEN << "Replacement complete. Output file: " << ULINE << filename + ".replace" << RESET << std::endl;
 }
 
-int main(int argc, char **argv) {
-    if (argc != 4) {
+int main(int argc, char **argv)
+{
+    if (argc != 4)
+	{
         std::cerr << RED << "Error: You have to pass 3 arguments: <filename> <s1> <s2>" << RESET << std::endl;
         return(1);
     }
