@@ -2,6 +2,10 @@
 
 int main(int argc, char **argv)
 {
-    std::cout << argv[argc-1] << std::endl;
-    return (0);
+	Harl harl;
+	if (argc == 2)
+		switchLevel(harl, argv[1]);
+    else
+		std::cout << RED << "Incorrect argument provided." << RESET << std::endl;
+    return(0);
 }

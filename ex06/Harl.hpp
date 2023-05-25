@@ -5,8 +5,8 @@ const std::string RED    = "\033[31m";
 const std::string ULINE  = "\033[4m";
 const std::string RESET  = "\033[0m";
 const std::string GREEN  = "\033[32m";
-const std::string BOLD   = "\033[1m";
-const std::string ITALIC   = "\033[3m";
+const std::string BOLD	 = "\033[1m";
+const std::string ITALIC = "\033[3m";
 
 class Harl
 {
@@ -21,3 +21,6 @@ class Harl
 	    void complain(std::string level);
 		int getLevelIndex(const std::string &level, const std::string levels[]);
 };
+
+int		getLevel(const std::string &argv);
+void	switchLevel(Harl &harl, std::string argv);
